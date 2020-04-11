@@ -1,0 +1,43 @@
+<div id="header" class="nav-collapse nav-solid">
+    <div class="row clearfix">
+        <div class="col-1">
+
+            <!--Logo-->
+            <div id="logo">
+
+                <!--Logo that is shown on the banner-->
+                <a routerLink="/home">
+                <img src="assets/images/logo-3.png" id="banner-logo" alt="Landing Page"/>
+                </a>
+                <!--End of Banner Logo-->
+
+                <!--The Logo that is shown on the sticky Navigation Bar-->
+                <a routerLink="/home">
+                <img src="assets/images/logo-3.png" id="navigation-logo" alt="Landing Page"/>
+                </a>
+                <!--End of Navigation Logo-->
+
+            </div>
+            <!--End of Logo-->
+            <aside>
+                <a [routerLink]="[{outlets: {popup: ['contactus']}}]">CONTACT US </a>
+                <a [routerLink]="[{outlets: {popup: ['subscribe']}}]"> SUBSCRIBE</a>
+                <app-user-profile-icon [profileImage]="profileImage"></app-user-profile-icon>
+                <app-social></app-social>
+                
+            </aside>
+            
+            <!--Main Navigation-->
+            <nav id="nav-main">
+                <app-navmenu [menu]="menu" [menuopen]="true"></app-navmenu>
+            </nav>
+            <!--End of Main Navigation-->
+
+            <div id="nav-trigger"><span [class.open]="menuOpen===true" (click)="toggleMenu(!menuOpen)"></span></div>
+            <nav id="nav-mobile">
+                <app-navmenu [menu]="menu" [menuopen]="menuOpen" (toggleMenu)="toggleMenu($event)"></app-navmenu>
+            </nav>
+                
+        </div>
+    </div>
+</div><!--End of Header-->
