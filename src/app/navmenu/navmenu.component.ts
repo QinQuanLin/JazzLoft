@@ -5,6 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './navmenu.component.html',
   styleUrls: ['./navmenu.component.css']
 })
+
 export class NavmenuComponent implements OnInit {
 
   @Input() menu: any;
