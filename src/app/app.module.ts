@@ -3,12 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { ContentComponent } from './content/content.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
-import { ClientsComponent } from './clients/clients.component';
 import { FooterComponent } from './footer/footer.component';
-import { PricingComponent } from './pricing/pricing.component';
+
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SocialComponent } from './social/social.component';
@@ -21,7 +17,6 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pager.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { ContactusComponent } from './contactus/contactus.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
@@ -31,18 +26,12 @@ import { ArticleCreateComponent } from './article-create/article-create.componen
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
-import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ForstaffComponent } from './forstaff/forstaff.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GalleryComponent,
-    ContentComponent,
-    TestimonialComponent,
-    ClientsComponent,
     FooterComponent,
-    PricingComponent,
     HeaderComponent,
     NavigationComponent,
     SocialComponent,
@@ -53,11 +42,9 @@ import { ForstaffComponent } from './forstaff/forstaff.component';
     PaginationComponent,
     LoginComponent,
     SignupComponent,
-    ContactusComponent,
     ArticleEditComponent,
     ArticleCreateComponent,
     NavmenuComponent,
-    SubscribeComponent,
     ForstaffComponent,
   ],
   imports: [

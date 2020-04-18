@@ -14,14 +14,8 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     const menu = [
       { id: 1, title: 'home', link: '/home'},
-      { id: 3, title: 'gallery', link: '/gallery'},
-      { id: 4, title: 'services', link: '/services'},
-      { id: 5, title: 'testimonials', link: '/testimonials'},
-      { id: 6, title: 'clients', link: '/clients'},
-      { id: 7, title: 'pricing', link: '/pricing'},
-      { id: 8, title: 'blog', link: '/blog'},
-      { id: 9, title: 'login', link: '/login'},
-      { id: 10, title: 'forstaff', link: '/forstaff'},
+      { id: 2, title: 'blog', link: '/blog'},
+      { id: 3, title: 'forstaff', link: '/forstaff'},
     ];
     const posts = [
         {id: 1, title: 'First article', author: 'AD', image: 'gallery-image-1.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
