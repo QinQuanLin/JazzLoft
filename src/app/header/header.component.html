@@ -10,7 +10,8 @@
             </div>
 
             <!--Call to Action-->
-            <a href="{{header.buttonlink}}" class="button">{{header.buttontext}}</a>
+            <a routerLink="/blog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="button"> {{header.buttontext}}</a>
+            <a href="{{header.weblink}}" class="button">{{header.mainwebsite}}</a>
             <!--End Call to Action-->
 
         </div>

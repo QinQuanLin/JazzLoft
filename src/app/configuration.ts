@@ -3,7 +3,9 @@ export const configuration = {
     heading: 'Welcome to the Jazz Loft Archive',
     headingtext: 'Whether you are a researcher, musician, or both, dive into the world of Jazz! To tour the museum, we are located in Stony Brook, Long Island.',
     buttontext: 'SHOW ME SOME JAZZ NOW!',
-    buttonlink: '/gallery'
+    mainwebsite: 'Return to Main Website',
+    weblink: 'https://www.thejazzloft.org',
+    buttonlink: '/gallery',
   },
   intro: {
     tagline: 'SUCCESS',
