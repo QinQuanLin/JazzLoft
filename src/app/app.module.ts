@@ -33,6 +33,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { ForstaffComponent } from './forstaff/forstaff.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     ArticleCreateComponent,
     NavmenuComponent,
     SubscribeComponent,
+    ForstaffComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,7 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { ForstaffComponent } from './forstaff/forstaff.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'article-create', component: ArticleCreateComponent, canActivate: [RouteguardService] },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'forstaff', component: ForstaffComponent },
   { path: 'contactus', component: ContactusComponent, outlet: 'popup' },
   { path: '404', component: NotfoundComponent },
   { path: '**', component: NotfoundComponent },
