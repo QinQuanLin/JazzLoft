@@ -7,6 +7,7 @@ import { Post } from '../post';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
+  displayedColumns: string[] = ['position', 'title', 'name', 'date'];
   @Input() post: Post;
 
   constructor() { }

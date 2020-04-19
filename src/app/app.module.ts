@@ -23,8 +23,12 @@ import { NavmenuComponent } from './navmenu/navmenu.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { ForstaffComponent } from './forstaff/forstaff.component';
 import { FilterComponent } from './filter/filter.component';
-import { SearchComponent } from './search/search.component';
 import { TableComponent } from './table/table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,6 @@ import { TableComponent } from './table/table.component';
     NavmenuComponent,
     ForstaffComponent,
     FilterComponent,
-    SearchComponent,
     TableComponent,
   ],
   imports: [
@@ -51,6 +54,10 @@ import { TableComponent } from './table/table.component';
     ReactiveFormsModule,
     HttpClientModule,
     UserDashboardModule,
+    MatTableModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
     MarkdownModule.forRoot({
       loader: HttpClientModule, // optional, only if you use [src] attribute
       markedOptions: {
@@ -70,7 +77,9 @@ import { TableComponent } from './table/table.component';
 // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+
+BrowserAnimationsModule
   ],
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]

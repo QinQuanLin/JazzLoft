@@ -1,26 +1,100 @@
 <!--Blog Tables-->
 <section id="pricing" class="secondary-color text-center scrollto clearfix ">
     <div class="row clearfix">
-        <app-search></app-search>
         <div class="col-3-3">
             <app-filter></app-filter>
         </div>
-        <div class="col-3-3">
-            <app-table></app-table>
-        </div>
-        
-        <!-- <div class="section-heading">
-            <h3>{{blog.tagline}}</h3>
-            <h2 class="section-title">{{blog.title | uppercase}}</h2>
+
+        <div class="col-2-3">
+            <mat-form-field>
+            <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+            </mat-form-field>
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+                  <td mat-cell *matCellDef="let post" routerLink="/article/{{post.id}}"> {{post.id}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="title">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+                  <td mat-cell *matCellDef="let post" routerLink="/article/{{post.id}}"> {{post.title}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
+                  <td mat-cell *matCellDef="let post"> {{post.author}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="date">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Publish Date </th>
+                  <td mat-cell *matCellDef="let post"> {{post.publishdate}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20, 40]" showFirstLastButtons></mat-paginator>
+            
+
+
+            <!-- Table Alternative
+
+                 <div class='card-body'>
+                <div class='row'>
+                  <div class='col-md-2'>Filter by:</div>
+                  <div class='col-md-4'>
+                    <input type='text'
+                       [(ngModel)]='listFilter'/>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='col-md-6'>
+                    <h4>Filtered by: </h4>
+                  </div>
+                </div>
+                <div class='table-responsive'>
+                  <table class='table'>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publish Date</th>
+                        <th>Excert</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor = 'let post of pages'>
+                          <app-post [post]="post"></app-post>
+                    </tr>
+                    </tbody>
+                  </table>
+                 
+                </div>
+                
+              </div> -->
+
+            <!-- <div class="section-heading">
+            
             <a routerLink="/article-create" class="button" id="add-button"><i class="ion ion-edit"></i></a>
+            <div *ngFor="let post of pages" class="post-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+                <app-post [post]="post"></app-post>
+            </div>
+            <div>
+                <app-pagination [pager]="pager" (setPage)="setPage($event)"></app-pagination>
+            </div>
+            </div> -->
+
         </div>
-        <div *ngFor="let post of pages" class="post-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-            <app-post [post]="post"></app-post>
-        </div>
-    </div>
-    <div>
-        <app-pagination [pager]="pager" (setPage)="setPage($event)"></app-pagination> -->
-    
     </div>
 </section>
 <!--End of Blog Tables-->

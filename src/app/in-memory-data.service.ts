@@ -18,17 +18,17 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 3, title: 'forstaff', link: '/forstaff'},
     ];
     const posts = [
-        {id: 1, title: 'First article', author: 'AD', image: 'gallery-image-1.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 2, title: 'Second article', author: 'AD', image: 'gallery-image-2.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 3, title: 'Third article', author: 'AD', image: 'gallery-image-3.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 4, title: 'Fourth article', author: 'AD', image: 'gallery-image-4.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 5, title: 'Fifth article', author: 'AD', image: 'gallery-image-5.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 6, title: 'Sixth article', author: 'AD', image: 'gallery-image-6.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 7, title: 'Seventh article', author: 'AD', image: 'gallery-image-1.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 8, title: 'Eigth article', author: 'AD', image: 'gallery-image-2.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 9, title: 'Ninth article', author: 'AD', image: 'gallery-image-3.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 10, title: 'Tenth article', author: 'AD', image: 'gallery-image-4.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
-        {id: 11, title: 'Eleventh article', author: 'AD', image: 'gallery-image-5.jpg', publishdate: '2018-06-19T07:22Z', excert: 'This is the summary of the article...'},
+        {id: 1, title: 'Music Score 1', author: 'Qin Quan Lin', publishdate: '2018-06-19T07:22Z'},
+        {id: 2, title: 'Music Score 2', author: 'Qin Lin Quan', publishdate: '2018-06-19T07:22Z'},
+        {id: 3, title: 'Music Score 3', author: 'Qin Qin Qin', publishdate: '2018-06-19T07:22Z'},
+        {id: 4, title: 'Music Score 4', author: 'Quan Quan Quan', publishdate: '2018-06-19T07:22Z'},
+        {id: 5, title: 'Music Score 5', author: 'Qin Lin', publishdate: '2018-06-19T07:22Z'},
+        {id: 6, title: 'Music Score 6', author: 'Quan Lin', publishdate: '2018-06-19T07:22Z'},
+        {id: 7, title: 'Music Score 7', author: 'Lin Quan', publishdate: '2018-06-19T07:22Z'},
+        {id: 8, title: 'Music Score 8', author: 'Lin Qin Quan', publishdate: '2018-06-19T07:22Z'},
+        {id: 9, title: 'Music Score 9', author: 'Quan Lin Quan', publishdate: '2018-06-19T07:22Z'},
+        {id: 10, title: 'Music Score 10', author: 'Quan Lin', publishdate: '2018-06-19T07:22Z'},
+        {id: 11, title: 'Music Score 11', author: 'Lin Lin Qin', publishdate: '2018-06-19T07:22Z'},
       ];
 
     return {users, posts, menu};

@@ -1,15 +1,31 @@
+
+
+
+
+<!-- <td>
+    <a routerLink="/article/{{post.id}}" class="button">
+      {{ post.id }}
+    </a>
+</td>
+  <td routerLink="/article/{{post.id}}" class="button" >{{ post.title }}</td>
+  <td>{{ post.author }}</td>
+  <td>{{ post.publishdate | date:'dd-MMM-yyyy' }}</td>
+  <td>{{ post.excert }}</td> -->
+
+
+
+
 <!--Post Block-->
+
 <div class="post-block-content">
     <h3>{{post.title}}</h3>
     <p class="post-sub">Written By: {{post.author}} | {{post.publishdate | date: 'dd-MMM-yyyy'}}</p>
     <div class="post-featured-image">
-        <img src="../../assets/images/gallery-images/{{post.image}}">
+        <!-- <img src="../../assets/images/gallery-images/{{post.image}}"> -->
     </div>
     <ul>
-        <div markdown [data]="post.excert" id="preview"></div>
+        <!-- <div markdown [data]="post.excert" id="preview"></div> -->
     </ul>
-    <a routerLink="/article/{{post.id}}" class="button"><i class="ion ion-heart"></i></a>
-    <a routerLink="/article-edit/{{post.id}}" class="button"><i class="ion ion-heart"></i></a>
 </div>
 
 <!--End Post Block-->
