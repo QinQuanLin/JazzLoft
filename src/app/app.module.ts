@@ -1,13 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
-
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { SocialComponent } from './social/social.component';
 import { ConfigService } from './config.service';
 import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
@@ -21,12 +18,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ArticleEditComponent } from './article-edit/article-edit.component';
-import { ArticleCreateComponent } from './article-create/article-create.component';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { ForstaffComponent } from './forstaff/forstaff.component';
+import { FilterComponent } from './filter/filter.component';
+import { SearchComponent } from './search/search.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +32,6 @@ import { ForstaffComponent } from './forstaff/forstaff.component';
     FooterComponent,
     HeaderComponent,
     NavigationComponent,
-    SocialComponent,
     BlogComponent,
     ArticleComponent,
     PostComponent,
@@ -42,10 +39,11 @@ import { ForstaffComponent } from './forstaff/forstaff.component';
     PaginationComponent,
     LoginComponent,
     SignupComponent,
-    ArticleEditComponent,
-    ArticleCreateComponent,
     NavmenuComponent,
     ForstaffComponent,
+    FilterComponent,
+    SearchComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,

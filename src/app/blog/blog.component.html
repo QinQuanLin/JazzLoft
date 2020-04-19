@@ -1,7 +1,15 @@
 <!--Blog Tables-->
 <section id="pricing" class="secondary-color text-center scrollto clearfix ">
     <div class="row clearfix">
-        <div class="section-heading">
+        <app-search></app-search>
+        <div class="col-3-3">
+            <app-filter></app-filter>
+        </div>
+        <div class="col-3-3">
+            <app-table></app-table>
+        </div>
+        
+        <!-- <div class="section-heading">
             <h3>{{blog.tagline}}</h3>
             <h2 class="section-title">{{blog.title | uppercase}}</h2>
             <a routerLink="/article-create" class="button" id="add-button"><i class="ion ion-edit"></i></a>
@@ -11,7 +19,8 @@
         </div>
     </div>
     <div>
-        <app-pagination [pager]="pager" (setPage)="setPage($event)"></app-pagination>
+        <app-pagination [pager]="pager" (setPage)="setPage($event)"></app-pagination> -->
+    
     </div>
 </section>
 <!--End of Blog Tables-->
