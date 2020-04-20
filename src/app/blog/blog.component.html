@@ -14,36 +14,36 @@
 
                 <!--- Note that these columns can be defined in any order.
                       The actual rendered columns are set as a property on the row definition" -->
-              
+
                 <!-- Position Column -->
                 <ng-container matColumnDef="id">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
                   <td mat-cell *matCellDef="let post" routerLink="/article/{{post.id}}"> {{post.id}} </td>
                 </ng-container>
-              
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="title">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
                   <td mat-cell *matCellDef="let post" routerLink="/article/{{post.id}}"> {{post.title}} </td>
                 </ng-container>
-              
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="name">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
                   <td mat-cell *matCellDef="let post"> {{post.author}} </td>
                 </ng-container>
-              
+
                 <!-- Symbol Column -->
                 <ng-container matColumnDef="date">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Publish Date </th>
                   <td mat-cell *matCellDef="let post"> {{post.publishdate}} </td>
                 </ng-container>
-              
+
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
               <mat-paginator [pageSizeOptions]="[50, 100, 40, 10, 200]" showFirstLastButtons></mat-paginator>
-            
+
 
 
             <!-- Table Alternative
@@ -78,13 +78,13 @@
                     </tr>
                     </tbody>
                   </table>
-                 
+
                 </div>
-                
+
               </div> -->
 
             <!-- <div class="section-heading">
-            
+
             <a routerLink="/article-create" class="button" id="add-button"><i class="ion ion-edit"></i></a>
             <div *ngFor="let post of pages" class="post-block col-3 wow fadeInUp" data-wow-delay="0.4s">
                 <app-post [post]="post"></app-post>

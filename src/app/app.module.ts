@@ -47,6 +47,7 @@ import {MatSortModule} from '@angular/material/sort';
     ForstaffComponent,
     FilterComponent,
     TableComponent,
+
   ],
   imports: [
     BrowserModule,
