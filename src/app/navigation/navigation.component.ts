@@ -19,12 +19,12 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
   profileImage: string;
   user: any;
 
-  constructor(private location: Location, 
+  constructor(private location: Location,
     private auth: AuthenticationService,
     private config: ConfigService) { }
 
   ngOnInit() {
-    
+
     this.getMenu(this.database); //want all values so don't pass id
     this.menuOpen = false;
     this.isloggedIn = this.auth.isloggedIn();
@@ -64,6 +64,6 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
   }
 
   logout() {
-    this.auth.logout(); 
+    this.auth.logout();
   }
 }
