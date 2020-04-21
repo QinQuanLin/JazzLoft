@@ -29,6 +29,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { TableFilterPipe } from './filter/table-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import {MatSortModule} from '@angular/material/sort';
     ForstaffComponent,
     FilterComponent,
     TableComponent,
+    TableFilterPipe,
 
   ],
   imports: [
@@ -59,6 +62,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatInputModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCheckboxModule,
     MarkdownModule.forRoot({
       loader: HttpClientModule, // optional, only if you use [src] attribute
       markedOptions: {
