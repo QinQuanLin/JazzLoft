@@ -63,6 +63,7 @@ import { TableFilterPipe } from './filter/table-filter.pipe';
     MatPaginatorModule,
     MatSortModule,
     MatCheckboxModule,
+    FormsModule,
     MarkdownModule.forRoot({
       loader: HttpClientModule, // optional, only if you use [src] attribute
       markedOptions: {

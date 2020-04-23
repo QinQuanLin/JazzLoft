@@ -19,10 +19,10 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     const posts = [
         {id: 1, title: 'Music Score 1', author: 'Qin Quan Lin', publishdate: '2018-06-19T07:22Z'},
-        {id: 2, title: 'Music Score 2', author: 'Qin Lin Quan', publishdate: '2018-06-19T07:22Z'},
-        {id: 3, title: 'Music Score 3', author: 'Qin Qin Qin', publishdate: '2018-06-19T07:22Z'},
-        {id: 4, title: 'Music Score 4', author: 'Quan Quan Quan', publishdate: '2018-06-19T07:22Z'},
-        {id: 5, title: 'Music Score 5', author: 'Qin Lin', publishdate: '2018-06-19T07:22Z'},
+        {id: 2, title: 'Music Score 2', author: 'Amber Li', publishdate: '2018-06-19T07:22Z'},
+        {id: 3, title: 'Music Score 3', author: 'Young Seok', publishdate: '2018-06-19T07:22Z'},
+        {id: 4, title: 'Music Score 4', author: 'Tom Tommy', publishdate: '2018-06-19T07:22Z'},
+        {id: 5, title: 'Music Score 5', author: 'Prof', publishdate: '2018-06-19T07:22Z'},
         {id: 6, title: 'Music Score 6', author: 'Quan Lin', publishdate: '2018-06-19T07:22Z'},
         {id: 7, title: 'Music Score 7', author: 'Lin Quan', publishdate: '2018-06-19T07:22Z'},
         {id: 8, title: 'Music Score 8', author: 'Lin Qin Quan', publishdate: '2018-06-19T07:22Z'},

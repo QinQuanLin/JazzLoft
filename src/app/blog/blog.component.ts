@@ -16,6 +16,21 @@ export class BlogComponent implements OnInit {
   displayedColumns: string[] = ['id', 'title', 'name', 'date'];
   dataSource: any;
 
+  filter = {
+  };
+  title: string;
+  author: string;
+
+  authors: string[] = ['Qin Quan Lin', 'Amber Li', 'Young Seok', 'Tom Tommy', 'Prof'];
+  
+  users: any[] = [
+    {id: 1, title: 'Music Score 1', author: 'Qin Quan Lin', publishdate: '2018-06-19T07:22Z'},
+    {id: 2, title: 'Music Score 2', author: 'Amber Li', publishdate: '2018-06-19T07:22Z'},
+    {id: 3, title: 'Music Score 3', author: 'Young Seok', publishdate: '2018-06-19T07:22Z'},
+    {id: 4, title: 'Music Score 4', author: 'Tom Tommy', publishdate: '2018-06-19T07:22Z'},
+    {id: 5, title: 'Music Score 5', author: 'Prof', publishdate: '2018-06-19T07:22Z'},
+];
+
   constructor(private config: ConfigService, private pagerService: PagerService) { }
   
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -28,6 +43,10 @@ export class BlogComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.title) {
+      console.log(this.title);
+      this.dataSource.filter = this.title.trim().toLowerCase();
+    }
   }
 
   getPosts() {
@@ -39,4 +58,5 @@ export class BlogComponent implements OnInit {
       }
     );
   }
+
 }
