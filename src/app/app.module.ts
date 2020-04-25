@@ -32,6 +32,9 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { TableFilterPipe } from './filter/table-filter.pipe';
 
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +67,8 @@ import { TableFilterPipe } from './filter/table-filter.pipe';
     MatSortModule,
     MatCheckboxModule,
     FormsModule,
+    MatExpansionModule,
+    MatNativeDateModule,
     MarkdownModule.forRoot({
       loader: HttpClientModule, // optional, only if you use [src] attribute
       markedOptions: {
@@ -77,17 +82,21 @@ import { TableFilterPipe } from './filter/table-filter.pipe';
         },
       },
     }),
+    
 
-// The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-// and returns simulated server responses.
-// Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+        HttpClientInMemoryWebApiModule.forRoot(
+          InMemoryDataService, { dataEncapsulation: false }
+        ),
 
-BrowserAnimationsModule
-  ],
+  BrowserAnimationsModule
+    ],
+
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

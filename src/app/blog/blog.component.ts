@@ -13,50 +13,131 @@ import {MatSort} from '@angular/material/sort';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'title', 'name', 'date'];
-  dataSource: any;
+  filterValues = {};
+  dataSource = new MatTableDataSource();
+  displayedColumns: string[] = ['id', 'title', 'author', 'publishdate'];
 
-  filter = {
-  };
-  title: string;
-  author: string;
+  filterSelectObj = [];
+  constructor(
+  ) {
 
-  authors: string[] = ['Qin Quan Lin', 'Amber Li', 'Young Seok', 'Tom Tommy', 'Prof'];
-  
-  users: any[] = [
-    {id: 1, title: 'Music Score 1', author: 'Qin Quan Lin', publishdate: '2018-06-19T07:22Z'},
-    {id: 2, title: 'Music Score 2', author: 'Amber Li', publishdate: '2018-06-19T07:22Z'},
-    {id: 3, title: 'Music Score 3', author: 'Young Seok', publishdate: '2018-06-19T07:22Z'},
-    {id: 4, title: 'Music Score 4', author: 'Tom Tommy', publishdate: '2018-06-19T07:22Z'},
-    {id: 5, title: 'Music Score 5', author: 'Prof', publishdate: '2018-06-19T07:22Z'},
-];
-
-  constructor(private config: ConfigService, private pagerService: PagerService) { }
-  
+    // Object to create Filter for
+    this.filterSelectObj = [
+      {
+        name: 'ID',
+        columnProp: 'id',
+        options: []
+      }, {
+        name: 'TITLE',
+        columnProp: 'title',
+        options: []
+      }, {
+        name: 'AUTHOR',
+        columnProp: 'author',
+        options: []
+      }, {
+        name: 'DATE',
+        columnProp: 'publishdate',
+        options: []
+      }
+    ]
+  }
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
-  
+
   ngOnInit() {
-    this.getPosts();
-    
-  }
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    if (this.title) {
-      console.log(this.title);
-      this.dataSource.filter = this.title.trim().toLowerCase();
-    }
+    this.getRemoteData();
+
+    // Overrride default filter behaviour of Material Datatable
+    this.dataSource.filterPredicate = this.createFilter();
   }
 
-  getPosts() {
-    this.config.getPosts().subscribe( //observable can subscribe
-      posts => {
-        this.dataSource = new MatTableDataSource<Post>(posts);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+  // Get Uniqu values from columns to build filter
+  getFilterObject(fullObj, key) {
+    const uniqChk = [];
+    fullObj.filter((obj) => {
+      if (!uniqChk.includes(obj[key])) {
+        uniqChk.push(obj[key]);
       }
-    );
+      return obj;
+    });
+    return uniqChk;
   }
 
+  // Get remote serve data using HTTP call
+  getRemoteData() {
+
+    const remoteDummyData = [
+      {"id": 1, "title": 'Music Score 1', "author": 'QinQuanLin', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 2, "title": 'Music Score2', "author": 'AmberLi', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 3, "title": 'MusicScore3', "author": 'Young Seok', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 4, "title": 'MusicScore4', "author": 'Tom Tommy', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 5, "title": 'MusicScore5', "author": 'Prof', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 6, "title": 'Music Score 6', "author": 'QuanLin', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 7, "title": 'Music Score 7', "author": 'LinQuan', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 8, "title": 'Music Score 8', "author": 'LinQinQuan', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 9, "title": 'Music Score 9', "author": 'QuanLinQuan', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 10, "title": 'Music Score 10', "author": 'QuanLin', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 11, "title": 'Music Score 11', "author": 'LinLinQin', "publishdate": '2018-06-19T07:22Z'},
+    ];
+    this.dataSource.data = remoteDummyData;
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+
+    this.filterSelectObj.filter((o) => {
+      o.options = this.getFilterObject(remoteDummyData, o.columnProp);
+    });
+  }
+
+  // Called on Filter change
+  filterChange(filter, event) {
+    //let filterValues = {}
+    this.filterValues[filter.columnProp] = event.target.value.trim().toLowerCase()
+    this.dataSource.filter = JSON.stringify(this.filterValues)
+  }
+
+  // Custom filter method fot Angular Material Datatable
+  createFilter() {
+    let filterFunction = function (data: any, filter: string): boolean {
+      let searchTerms = JSON.parse(filter);
+      let isFilterSet = false;
+      for (const col in searchTerms) {
+        if (searchTerms[col].toString() !== '') {
+          isFilterSet = true;
+        } else {
+          delete searchTerms[col];
+        }
+      }
+
+      console.log(searchTerms);
+
+      let nameSearch = () => {
+        let found = false;
+        if (isFilterSet) {
+          for (const col in searchTerms) {
+            searchTerms[col].trim().toLowerCase().split(' ').forEach(word => {
+              if (data[col].toString().toLowerCase().indexOf(word) != -1 && isFilterSet) {
+                found = true
+              }
+            });
+          }
+          return found
+        } else {
+          return true;
+        }
+      }
+      return nameSearch()
+    }
+    return filterFunction
+  }
+
+
+  // Reset table filters
+  resetFilters() {
+    this.filterValues = {}
+    this.filterSelectObj.forEach((value, key) => {
+      value.modelValue = undefined;
+    })
+    this.dataSource.filter = "";
+  }
 }
