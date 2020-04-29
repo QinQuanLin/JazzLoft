@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ConfigService } from '../config.service';
-import { PagerService } from '../pager.service';
 import { Post } from '../post';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
@@ -73,7 +72,7 @@ export class BlogComponent implements OnInit {
   getRemoteData() {
 
     const remoteDummyData = [
-      {"id": 1, "title": 'Interview', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "publishdate": '2018-06-19T07:22Z'},
+      {"id": 1, "title": 'Interview', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "publishdate": '2018-06-19T07:22Z', "image": ""},
         {"id": 2,  "title": 'Music 1', "arranger": 'Qin Quan Lin', "artist": 'Qin Quan Li', "publishdate": '2018-06-19T07:22Z'},
         {"id": 3, "title": 'Music 2', "arranger": 'Amber Li', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
         {"id": 4, "title": 'Music 3', "arranger": 'Young Seok Seo', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},

@@ -10,8 +10,6 @@ import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
 import { PostComponent } from './post/post.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { PagerService } from './pager.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -22,15 +20,11 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { ForstaffComponent } from './forstaff/forstaff.component';
-import { FilterComponent } from './filter/filter.component';
-import { TableComponent } from './table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import { TableFilterPipe } from './filter/table-filter.pipe';
 
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -45,14 +39,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ArticleComponent,
     PostComponent,
     NotfoundComponent,
-    PaginationComponent,
     LoginComponent,
     SignupComponent,
     NavmenuComponent,
     ForstaffComponent,
-    FilterComponent,
-    TableComponent,
-    TableFilterPipe,
 
   ],
   imports: [
@@ -65,7 +55,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatInputModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCheckboxModule,
     FormsModule,
     MatExpansionModule,
     MatNativeDateModule,
@@ -94,7 +83,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
   BrowserAnimationsModule
     ],
 
-  providers: [ConfigService, PagerService],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
