@@ -15,7 +15,7 @@ import {MatSort} from '@angular/material/sort';
 export class BlogComponent implements OnInit {
   filterValues = {};
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'title', 'author', 'publishdate'];
+  displayedColumns: string[] = ['id', 'title', 'arranger','artist' ,'publishdate'];
 
   filterSelectObj = [];
   constructor(
@@ -32,8 +32,13 @@ export class BlogComponent implements OnInit {
         columnProp: 'title',
         options: []
       }, {
-        name: 'AUTHOR',
-        columnProp: 'author',
+        name: 'ARRANGER',
+        columnProp: 'arranger',
+        options: []
+      },
+      {
+        name: 'ARTIST',
+        columnProp: 'artist',
         options: []
       }, {
         name: 'DATE',
@@ -68,17 +73,17 @@ export class BlogComponent implements OnInit {
   getRemoteData() {
 
     const remoteDummyData = [
-      {"id": 1, "title": 'Music Score 1', "author": 'QinQuanLin', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 2, "title": 'Music Score2', "author": 'AmberLi', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 3, "title": 'MusicScore3', "author": 'Young Seok', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 4, "title": 'MusicScore4', "author": 'Tom Tommy', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 5, "title": 'MusicScore5', "author": 'Prof', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 6, "title": 'Music Score 6', "author": 'QuanLin', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 7, "title": 'Music Score 7', "author": 'LinQuan', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 8, "title": 'Music Score 8', "author": 'LinQinQuan', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 9, "title": 'Music Score 9', "author": 'QuanLinQuan', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 10, "title": 'Music Score 10', "author": 'QuanLin', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 11, "title": 'Music Score 11', "author": 'LinLinQin', "publishdate": '2018-06-19T07:22Z'},
+      {"id": 1, "title": 'Interview', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 2,  "title": 'Music 1', "arranger": 'Qin Quan Lin', "artist": 'Qin Quan Li', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 3, "title": 'Music 2', "arranger": 'Amber Li', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 4, "title": 'Music 3', "arranger": 'Young Seok Seo', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 5, "title": 'Music 4', "arranger": 'Tom Tommy', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 6, "title": 'Music 5', "arranger": 'Prof', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 7, "title": 'Music 6', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 8, "title": 'Music 7', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 9, "title": 'music 8', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 10, "title": 'Music 9', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+        {"id": 11, "title": 'Music 10', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
     ];
     this.dataSource.data = remoteDummyData;
     this.dataSource.paginator = this.paginator;

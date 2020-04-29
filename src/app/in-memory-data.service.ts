@@ -18,17 +18,17 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 3, title: 'forstaff', link: '/forstaff'},
     ];
     const posts = [
-        {id: 1, title: 'Music Score 1', author: 'Qin Quan Lin', publishdate: '2018-06-19T07:22Z'},
-        {id: 2, title: 'Music Score 2', author: 'Amber Li', publishdate: '2018-06-19T07:22Z'},
-        {id: 3, title: 'Music Score 3', author: 'Young Seok', publishdate: '2018-06-19T07:22Z'},
-        {id: 4, title: 'Music Score 4', author: 'Tom Tommy', publishdate: '2018-06-19T07:22Z'},
-        {id: 5, title: 'Music Score 5', author: 'Prof', publishdate: '2018-06-19T07:22Z'},
-        {id: 6, title: 'Music Score 6', author: 'Quan Lin', publishdate: '2018-06-19T07:22Z'},
-        {id: 7, title: 'Music Score 7', author: 'Lin Quan', publishdate: '2018-06-19T07:22Z'},
-        {id: 8, title: 'Music Score 8', author: 'Lin Qin Quan', publishdate: '2018-06-19T07:22Z'},
-        {id: 9, title: 'Music Score 9', author: 'Quan Lin Quan', publishdate: '2018-06-19T07:22Z'},
-        {id: 10, title: 'Music Score 10', author: 'Quan Lin', publishdate: '2018-06-19T07:22Z'},
-        {id: 11, title: 'Music Score 11', author: 'Lin Lin Qin', publishdate: '2018-06-19T07:22Z'},
+        {id: 1, title: 'Interview', Arranger: 'Lioyd Trotman', Artist: 'Sam Taylor', publishdate: '2018-06-19T07:22Z'},
+        {id: 2,  title: 'Music 1', Arranger: 'Qin Quan Lin', Artist: 'Qin Quan Li', publishdate: '2018-06-19T07:22Z'},
+          {id: 3, title: 'Music 2', Arranger: 'Amber Li', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 4, title: 'Music 3', Arranger: 'Young Seok Seo', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 5, title: 'Music 4', Arranger: 'Tom Tommy', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 6, title: 'Music 5', Arranger: 'Prof', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 7, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 8, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 9, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 10, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 11, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
       ];
 
     return {users, posts, menu};
@@ -46,11 +46,11 @@ export class InMemoryDataService implements InMemoryDbService {
     return reqInfo.utils.createResponse$(() => {
       const dataEncapsulation = reqInfo.utils.getConfig().dataEncapsulation;
       const collection = reqInfo.collection;
-      const id = reqInfo.id; 
-      // if id, return one post. Otherwise no id, return entire collection as an array. 
+      const id = reqInfo.id;
+      // if id, return one post. Otherwise no id, return entire collection as an array.
       const data = id === undefined ? collection: reqInfo.utils.findById(collection, id);
 
-      const options: ResponseOptions = data ? 
+      const options: ResponseOptions = data ?
       {
         body: dataEncapsulation ? { data } : data,
         status: 200
@@ -112,7 +112,7 @@ export class InMemoryDataService implements InMemoryDbService {
         return options;
 
       });
-      
+
     } else if(reqInfo.id === 'signup') {
       reqInfo.id = null;
       console.log('from signup');

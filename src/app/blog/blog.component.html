@@ -1,14 +1,14 @@
 <!--Blog Tables-->
 <section id="pricing" class="secondary-color text-center scrollto clearfix ">
     <div class="row clearfix">
-      
+
 
         <div class="col">
             <!-- <mat-form-field>
             <mat-label>Filter Search</mat-label>
                 <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
             </mat-form-field> -->
-          
+
             <mat-form-field *ngFor="let filter of filterSelectObj" style="margin-left: 15px;">
               <mat-label>Filter {{filter.name}}</mat-label>
               <select matNativeControl name="{{filter.columnProp}}" [(ngModel)]="filter.modelValue"
@@ -21,30 +21,35 @@
             <button mat-flat-button color="warn" (click)="resetFilters()">Reset</button>
 
             <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
- 
+
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
                 <td mat-cell *matCellDef="let element" routerLink="/article/{{element.id}}"> {{element.id}} </td>
               </ng-container>
-           
+
               <ng-container matColumnDef="title">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
                 <td mat-cell *matCellDef="let element" routerLink="/article/{{element.id}}"> {{element.title}} </td>
               </ng-container>
-           
-              <ng-container matColumnDef="author">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
-                <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+
+              <ng-container matColumnDef="arranger">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Arranger </th>
+                <td mat-cell *matCellDef="let element"> {{element.arranger}} </td>
               </ng-container>
-           
+
+              <ng-container matColumnDef="artist">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Artist </th>
+                <td mat-cell *matCellDef="let element"> {{element.artist}} </td>
+              </ng-container>
+
               <ng-container matColumnDef="publishdate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Publish Date </th>
                 <td mat-cell *matCellDef="let element"> {{element.publishdate}} </td>
               </ng-container>
-           
+
               <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-           
+
             </table>
             <mat-paginator [pageSizeOptions]="[50,100,40,10,200]" showFirstLastButtons></mat-paginator>
 
@@ -53,7 +58,7 @@
 
 
 
-            
+
 
 
             <!-- Table Alternative
