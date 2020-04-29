@@ -18,8 +18,8 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 3, title: 'forstaff', link: '/forstaff'},
     ];
     const posts = [
-        {id: 1, title: 'Interview', Arranger: 'Lioyd Trotman', Artist: 'Sam Taylor', publishdate: '2018-06-19T07:22Z'},
-        {id: 2,  title: 'Music 1', Arranger: 'Qin Quan Lin', Artist: 'Qin Quan Li', publishdate: '2018-06-19T07:22Z'},
+          {id: 1, title: 'Interview', Arranger: 'Lioyd Trotman', Artist: 'Sam Taylor', publishdate: '2018-06-19T07:22Z'},
+          {id: 2,  title: 'Music 1', Arranger: 'Qin Quan Lin', Artist: 'Qin Quan Li', publishdate: '2018-06-19T07:22Z'},
           {id: 3, title: 'Music 2', Arranger: 'Amber Li', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
           {id: 4, title: 'Music 3', Arranger: 'Young Seok Seo', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
           {id: 5, title: 'Music 4', Arranger: 'Tom Tommy', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
