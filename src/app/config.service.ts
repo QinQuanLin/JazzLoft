@@ -1,3 +1,4 @@
+//Qin
 import { Injectable } from '@angular/core';
 import { configuration } from './configuration';
 import { Observable, of } from 'rxjs';

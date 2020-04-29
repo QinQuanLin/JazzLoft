@@ -1,3 +1,4 @@
+//Young Seok
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute} from '@angular/router';

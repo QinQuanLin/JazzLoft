@@ -1,3 +1,4 @@
+//Qin
 export const configuration = {
   header: {
     heading: 'Welcome to the Jazz Loft Archive',

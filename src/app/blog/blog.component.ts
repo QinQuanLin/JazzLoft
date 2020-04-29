@@ -1,3 +1,4 @@
+//Amber
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ConfigService } from '../config.service';
 import { Post } from '../post';

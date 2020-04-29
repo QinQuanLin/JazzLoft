@@ -1,3 +1,4 @@
+//Qin
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +9,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ConfigService } from './config.service';
 import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
-import { PostComponent } from './post/post.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -37,7 +37,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NavigationComponent,
     BlogComponent,
     ArticleComponent,
-    PostComponent,
     NotfoundComponent,
     LoginComponent,
     SignupComponent,
