@@ -20,17 +20,17 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 3, title: 'forstaff', link: '/forstaff'},
     ];
     const posts = [
-          {id: 1, title: 'Interview', Arranger: 'Lioyd Trotman', Artist: 'Sam Taylor', publishdate: '2018-06-19T07:22Z'},
-          {id: 2,  title: 'Music 1', Arranger: 'Qin Quan Lin', Artist: 'Qin Quan Li', publishdate: '2018-06-19T07:22Z'},
-          {id: 3, title: 'Music 2', Arranger: 'Amber Li', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 4, title: 'Music 3', Arranger: 'Young Seok Seo', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 5, title: 'Music 4', Arranger: 'Tom Tommy', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 6, title: 'Music 5', Arranger: 'Prof', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 7, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 8, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 9, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 10, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
-          {id: 11, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', publishdate: '2018-06-19T07:22Z'},
+          {id: 1, title: 'Interview', Arranger: 'Lioyd Trotman', Artist: 'Sam Taylor', note: '2018-06-19T07:22Z'},
+          {id: 2,  title: 'Music 1', Arranger: 'Qin Quan Lin', Artist: 'Qin Quan Li', note: '2018-06-19T07:22Z'},
+          {id: 3, title: 'Music 2', Arranger: 'Amber Li', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 4, title: 'Music 3', Arranger: 'Young Seok Seo', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 5, title: 'Music 4', Arranger: 'Tom Tommy', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 6, title: 'Music 5', Arranger: 'Prof', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 7, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 8, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 9, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 10, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
+          {id: 11, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
       ];
 
     return {users, posts, menu};

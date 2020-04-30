@@ -8,7 +8,7 @@ export class Post {
        public id: number,
        public title: string,
        public author: string,
-       public publishdate: string,
+       public note: string,
     ) {  }
 
 }

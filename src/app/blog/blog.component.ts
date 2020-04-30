@@ -15,7 +15,7 @@ import {MatSort} from '@angular/material/sort';
 export class BlogComponent implements OnInit {
   filterValues = {};
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'title', 'arranger','artist' ,'publishdate'];
+  displayedColumns: string[] = ['id', 'title', 'arranger','artist' , 'form', 'note'];
 
   filterSelectObj = [];
   constructor(
@@ -40,9 +40,15 @@ export class BlogComponent implements OnInit {
         name: 'ARTIST',
         columnProp: 'artist',
         options: []
-      }, {
-        name: 'DATE',
-        columnProp: 'publishdate',
+      },
+      {
+        name: 'FORM',
+        columnProp: 'form',
+        options: []
+      },
+      {
+        name: 'NOTE',
+        columnProp: 'note',
         options: []
       }
     ]
@@ -73,17 +79,17 @@ export class BlogComponent implements OnInit {
   getRemoteData() {
 
     const remoteDummyData = [
-      {"id": 1, "title": 'Interview', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "publishdate": '2018-06-19T07:22Z', "image": ""},
-        {"id": 2,  "title": 'Music 1', "arranger": 'Qin Quan Lin', "artist": 'Qin Quan Li', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 3, "title": 'Music 2', "arranger": 'Amber Li', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 4, "title": 'Music 3', "arranger": 'Young Seok Seo', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 5, "title": 'Music 4', "arranger": 'Tom Tommy', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 6, "title": 'Music 5', "arranger": 'Prof', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 7, "title": 'Music 6', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 8, "title": 'Music 7', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 9, "title": 'music 8', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 10, "title": 'Music 9', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
-        {"id": 11, "title": 'Music 10', "arranger": 'Anoymous', "artist": 'Anoymous', "publishdate": '2018-06-19T07:22Z'},
+      {"id": 1, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Tenor Sax'},
+        {"id": 2,  "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Piano'},
+        {"id": 3, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Bass'},
+        {"id": 4, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Lead Sheet',},
+        {"id": 5, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Score'},
+        {"id": 6, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Concert'},
+        {"id": 7, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Alto Sax'},
+        {"id": 8, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Percussion'},
+        {"id": 9, "title": 'Master Acetate Recording', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'Circa 1955'},
+        {"id": 10, "title": 'Audiodisc Master Acetate', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'Unknown composition'},
+        {"id": 11, "title": 'Naturally', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'See more info'},
     ];
     this.dataSource.data = remoteDummyData;
     this.dataSource.paginator = this.paginator;

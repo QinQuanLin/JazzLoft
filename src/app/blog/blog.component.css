@@ -12,3 +12,13 @@ table {
     width: 100%;
   }
   
+
+  .mat-column- {
+    display: flex;
+    justify-content: flex-end;
+    }
+
+    .mat-cell {
+        text-align: left;
+        justify-content:left;
+      }
