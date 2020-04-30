@@ -49,9 +49,5 @@ export class ArticleComponent implements OnInit {
       this.audio.pause();
     }
   }
-  stopAudio(){
-    this.audio.pause();
-    this.audio.currentTime = 0;
-  }
 }
 
