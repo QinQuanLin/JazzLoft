@@ -15,9 +15,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class ArticleComponent implements OnInit {
   post: Post;
   panelOpenState = false;
+  audio = new Audio();
   constructor(private route: ActivatedRoute, private config: ConfigService, private location: Location,
     private _formBuilder: FormBuilder) { }
-
+  
   ngOnInit() {
 
     let id = +this.route.snapshot.paramMap.get('id');
@@ -36,10 +37,16 @@ export class ArticleComponent implements OnInit {
     this.location.back();
   }
   playAudio(){
-    let audio = new Audio();
-    audio.src = "../../../assets/audio/lloydtrotman-samtaylor-interview.mp3";
-    audio.load();
-    audio.play();
+    this.audio.src = "../../../assets/audio/lloydtrotman-samtaylor-interview.mp3";
+    this.audio.load();
+    this.audio.play();
+  }
+  pauseAudio(){
+    this.audio.pause();
+  }
+  stopAudio(){
+    this.audio.pause();
+    this.audio.currentTime = 0;
   }
 }
 
