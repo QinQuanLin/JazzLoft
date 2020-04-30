@@ -42,7 +42,12 @@ export class ArticleComponent implements OnInit {
     this.audio.play();
   }
   pauseAudio(){
-    this.audio.pause();
+    if(this.audio.paused) {
+      this.audio.play();
+    }
+    else {
+      this.audio.pause();
+    }
   }
   stopAudio(){
     this.audio.pause();
