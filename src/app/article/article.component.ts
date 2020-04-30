@@ -37,7 +37,7 @@ export class ArticleComponent implements OnInit {
   }
   playAudio(){
     let audio = new Audio();
-    audio.src = "../../../assets/audio/alarm.wav";
+    audio.src = "../../../assets/audio/lloydtrotman-samtaylor-interview.mp3";
     audio.load();
     audio.play();
   }
