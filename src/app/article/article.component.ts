@@ -35,4 +35,11 @@ export class ArticleComponent implements OnInit {
   getBack() {
     this.location.back();
   }
+  playAudio(){
+    let audio = new Audio();
+    audio.src = "../../../assets/audio/alarm.wav";
+    audio.load();
+    audio.play();
+  }
 }
+
