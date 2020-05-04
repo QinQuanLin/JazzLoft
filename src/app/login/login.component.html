@@ -5,7 +5,7 @@
             <div class="center-form panel">
                 <div class="panel-body">
                 <h4 class="text-center"><i class="ion-log-ig"></i>Login</h4>
-
+                <!--Login Form with E-mail and Password-->
                 <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
                     <div class="form-group">
                         <input type="text" class="form-control input-lg" name="email" placeholder="Email" formControlName="email">
@@ -20,6 +20,7 @@
                     <button type="submit" class="btn btn-block btn-success">Login</button>
 
                     <p class="text-center">
+                        <!--Move to SignUp page if do not have account-->
                         <small>Don't have an account yet? <a routerLink="/signup">Sign up</a></small>
                     </p>
                 </form>

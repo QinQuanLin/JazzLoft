@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
   }
+  //Make a form to Login
   login(formData: NgForm) {
     return this.auth.login(formData).subscribe(
       (user)=> {

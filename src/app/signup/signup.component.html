@@ -5,7 +5,7 @@
             <div class="center-form panel">
                 <div class="panel-body">
                 <h4 class="text-center"><i class="ion-person-add"></i>Sign up</h4>
-
+                <!--SignUp Form with First, Last name, email and password-->
                 <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
                     <div class="form-group">
                         <input type="text" class="form-control form-names input-lg" formControlName="firstName" name="firstName" placeholder="First Name">
@@ -26,6 +26,7 @@
                     <button type="submit" class="btn btn-block btn-success"> Sign Up</button>
 
                     <p class="text-center">
+                      <!--Move to Login page if one has account-->
                         <small>Already have an account? <a routerLink="/forstaff">Login</a></small>
                     </p>
                 </form>
