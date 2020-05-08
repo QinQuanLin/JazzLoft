@@ -1,20 +1,21 @@
+<!--Home Page-->
 <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
     <!--Banner Content-->
     <div id="banner-content" class="row clearfix">
 
         <div class="col-38">
 
+            <!--Header-->
             <div class="section-heading">
                 <h1>{{header.heading}}</h1>
                 <h2>{{header.headingtext}}</h2>
             </div>
 
-            <!--Call to Action-->
+            <!--Buttons that link to Archive page and main Jazz Loft site-->
             <a routerLink="/blog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="button"> {{header.buttontext}}</a>
             <a href="{{header.weblink}}" class="button">{{header.mainwebsite}}</a>
-            <!--End Call to Action-->
 
         </div>
 
-    </div><!--End of Row-->
+    </div>
 </header>

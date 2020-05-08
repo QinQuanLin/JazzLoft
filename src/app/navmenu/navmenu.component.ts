@@ -1,4 +1,4 @@
-//Amber
+//File for links on navigation bar
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({

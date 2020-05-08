@@ -1,3 +1,4 @@
+//File for generating profile icon
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

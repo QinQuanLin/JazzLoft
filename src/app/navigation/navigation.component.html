@@ -1,3 +1,4 @@
+<!--Navigation bar-->
 <div id="header" class="nav-collapse nav-solid">
     <div class="row clearfix">
         <div class="col-1">
@@ -20,6 +21,7 @@
             </div>
             <!--End of Logo-->
             
+            <!--Profile icon-->
             <aside>
                 <br>
                 <app-user-profile-icon [profileImage]="profileImage"></app-user-profile-icon>
@@ -32,6 +34,7 @@
             </nav>
             <!--End of Main Navigation-->
 
+            <!--Menu is open-->
             <div id="nav-trigger"><span [class.open]="menuOpen===true" (click)="toggleMenu(!menuOpen)"></span></div>
             <nav id="nav-mobile">
                 <app-navmenu [menu]="menu" [menuopen]="menuOpen" (toggleMenu)="toggleMenu($event)"></app-navmenu>
@@ -39,4 +42,4 @@
 
         </div>
     </div>
-</div><!--End of Header-->
+</div>
