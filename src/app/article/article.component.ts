@@ -1,4 +1,4 @@
-//Young Seok
+// Article typescript page has functions such as ngOnInit(), getPostById(), getBack(), playAudio(),pauseAudio()
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute} from '@angular/router';
@@ -31,7 +31,7 @@ export class ArticleComponent implements OnInit {
       post => this.post = post
     );
   }
-  //Back to Archive Page
+  //function that get back to Archive page
   getBack() {
     this.location.back();
 }

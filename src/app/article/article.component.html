@@ -1,13 +1,16 @@
-<!--Article-->
+<!--HTML file for Article page-->
 <section id="pricing" class="secondary-color text-center scrollto clearfix ">
 
     <div class="row clearfix" *ngIf="post" style="padding-top: 100px;">
 
+<!--Archive image, play and pause button-->
       <div class="col-1 imageContainer">
           <img src="../assets/images/Interview/LT_score_6 copy.jpg">
           <a class="button" (click)="playAudio()">Play</a>
           <a class="button" (click)="pauseAudio()">Pause</a>
       </div>
+  <!--Archive information such as title, instrumentation, Artist, Arranger, and Notes-->
+  <!--input expansional-panel for detailed-->
       <div class="col-2-3">
         <mat-accordion>
           <mat-expansion-panel (opened)="panelOpenState = true"
@@ -76,11 +79,11 @@
           </mat-expansion-panel>
 
         </mat-accordion>
-      
+
       </div>
 
     </div>
-
+  <!--images of related items-->
   <div>
     <h2>See Related Items</h2>
   </div>
@@ -106,10 +109,10 @@
     <div class="col-1-3 imageContainer">
       <img src="../assets/images/Interview/LT_score_6 copy.jpg">
     </div>
-    
+
     </div>
 
-   
+
 
 </section>
 <!--End of Article-->

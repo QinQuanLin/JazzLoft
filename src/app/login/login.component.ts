@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private auth: AuthenticationService, private route: ActivatedRoute, private router: Router) {
 
    }
-
+//Check that email and password is valid or not
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       'email': [null, [Validators.required, Validators.email]],
