@@ -18,9 +18,8 @@ export class ArticleComponent implements OnInit {
   audio = new Audio();
   constructor(private route: ActivatedRoute, private config: ConfigService, private location: Location,
     private _formBuilder: FormBuilder) { }
-
+//initializes the component
   ngOnInit() {
-
     let id = +this.route.snapshot.paramMap.get('id');
     this.getPostById(id);
   }

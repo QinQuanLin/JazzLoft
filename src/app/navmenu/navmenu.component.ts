@@ -17,7 +17,7 @@ export class NavmenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   changeStatus($event) {
     this.toggleMenu.emit(!this.menuopen);
   }

@@ -1,4 +1,4 @@
-//this file brings functions such as ngOnInit(), getFooter()
+//this file for homepage
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 

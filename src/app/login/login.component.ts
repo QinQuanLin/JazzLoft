@@ -1,4 +1,4 @@
-//Young Seok
+//File for Login page
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service';
