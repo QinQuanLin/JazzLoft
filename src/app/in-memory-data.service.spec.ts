@@ -1,4 +1,4 @@
-//Qin
+// Default spec.ts
 
 import { TestBed } from '@angular/core/testing';
 

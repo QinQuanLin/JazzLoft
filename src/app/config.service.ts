@@ -1,4 +1,6 @@
-//Qin
+// Service that contains useful methods and data found in Configuration. 
+// The use of this service is by creating an instance of config in other components and call its necessary properties.
+
 import { Injectable } from '@angular/core';
 import { configuration } from './configuration';
 import { Observable, of } from 'rxjs';
@@ -16,8 +18,8 @@ const httpOptions = {
 })
 export class ConfigService {
 
-  config = configuration;
-  apiUrl = 'api/posts';
+  config = configuration; // Data from configuration.ts
+  apiUrl = 'api/posts'; // String name to call post from API
   
   constructor(private http: HttpClient) { }
 
@@ -35,10 +37,12 @@ export class ConfigService {
     };
   }
 
+  // Returns config data.
   getConfig() {
     return this.config;
   }
 
+  // Sends http request with apiUrl and id information to return specific post.
   getPostByID(id: number) {
     return this.http.get<any>(`${this.apiUrl}/${id}`).pipe(
       tap(
@@ -48,6 +52,7 @@ export class ConfigService {
     );
   }
 
+  // Returns all posts.
   getPosts(): Observable<Post[]> {
     return this.http.get<any>(this.apiUrl).pipe(
       tap(
@@ -57,12 +62,12 @@ export class ConfigService {
     );
   }
 
-  getSettings( database: string, id?: string ): Observable<any[]> { // general method to return everything from database name
+  getSettings( database: string, id?: string ): Observable<any[]> { // general method to return everything from a provided database name
     let uid = id || null; // unique id
-    let url: string;
-    uid !== null ? url = `api/${database}/${id}` : url = `api/${database}`; // if there is id, get specific item
+    let url: string; // url to check if there is one provided.
+    uid !== null ? url = `api/${database}/${id}` : url = `api/${database}`; // if there is id, get specific item by that id.
     
-    return this.http.get<any>(url).pipe(
+    return this.http.get<any>(url).pipe( // If id is null, url will contain only general database name.
       tap(
         setting => console.log(setting)
       ),
@@ -70,6 +75,7 @@ export class ConfigService {
     );
   }
 
+  // If user makes changes to the post, update this on the server. This method works but is no longer being used as edit. To implement, create edit buttons and generate a form to collect the changed data.
   updatePost(formData: NgForm): Observable<Post> {
     return this.http.put<any>(`${this.apiUrl}`, formData, httpOptions).pipe(
       tap(
@@ -79,6 +85,7 @@ export class ConfigService {
     );
   }
 
+  // To add additional post on the website. This method works, but is no longer being used.
   addPost(formData: NgForm): Observable<Post> {
     return this.http.post<any>(`${this.apiUrl}`, formData).pipe(
       tap(

@@ -1,4 +1,4 @@
-//Qin
+// Default app.component.ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({

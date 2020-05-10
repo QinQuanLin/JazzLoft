@@ -1,4 +1,4 @@
-//Qin
+// Post class
 
 import { User } from './user';
 

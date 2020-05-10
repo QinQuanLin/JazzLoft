@@ -1,4 +1,4 @@
-//Qin
+// General data that is used in the header, article, and footer.
 export const configuration = {
   header: {
     heading: 'Welcome to the Jazz Loft Archive',

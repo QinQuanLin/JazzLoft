@@ -1,4 +1,4 @@
-//Qin
+// Guards pages from being accessed without proper authentication.
 
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';

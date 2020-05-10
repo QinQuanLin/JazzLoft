@@ -1,4 +1,5 @@
-//Qin
+// Service to authenticate user information
+
 import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -24,6 +25,7 @@ export class AuthenticationService {
     );
   }
 
+  // Login feature that reads the login form and sends HTTP request to verify user information. User name authentication is processed successfully while password check is broken.
   login(formData: NgForm) {
     return this.http.post<any>(`${this.apiUrl}/login`, formData).pipe(
       tap(user => {
@@ -35,6 +37,7 @@ export class AuthenticationService {
     );
   }
 
+  // Signs the user out of their account.
   logout() {
     if (localStorage.getItem('currentUser')) {
       localStorage.removeItem('currentUser');
@@ -42,6 +45,7 @@ export class AuthenticationService {
     }
   }
 
+  // To verify that there is currently a user who is logged in. This determines whether user dashboard is accessible.
   isloggedIn() {
     if (localStorage.getItem('currentUser')) {
       return true;
@@ -50,15 +54,18 @@ export class AuthenticationService {
     }
   }
 
+  // If a current user is logged in, return user information.
   getUser() {
     if (this.isloggedIn) {
       return JSON.parse(localStorage.getItem('currentUser'));
     }
   }
 
+  // Below is the error handling found on Angular website.
+  
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-  
+
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
   

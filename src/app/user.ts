@@ -1,4 +1,4 @@
-//Qin
+// User class data.
 
 export class User {
     id: string;

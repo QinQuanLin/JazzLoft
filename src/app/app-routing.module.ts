@@ -1,4 +1,5 @@
-//Qin
+// Angular routing module to navigate between various pages (components).
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,6 +12,7 @@ import { RouteguardService } from './routeguard.service';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { ForstaffComponent } from './forstaff/forstaff.component';
 
+// A list of all paths. Add additional ones here.
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HeaderComponent },

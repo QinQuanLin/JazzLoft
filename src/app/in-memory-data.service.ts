@@ -1,4 +1,8 @@
-//Qin
+// Angular's In Memory Service that mimics a server containing data. Must be accessed through http request. These methods can be found in config.service.ts
+// This data service will be removed once the FileMaker API is ready.
+// Many of the methods and data here, such as posts and GetArticle() are no longer used. This data-service was once used
+// To implement HTTP and HTTPClient requests. Upon correct implementation and successful data retrieval, many of these data are
+// Not used. Instead, they are declared, and updated, within the components that need them.
 
 import { InMemoryDbService, RequestInfo, ResponseOptions } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
@@ -8,17 +12,23 @@ import { Injectable } from '@angular/core';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+
+    // All existing users are stored here.
     const users = [
       { id: 11, firstName: 'Thomas', lastName: 'Manuel', email: 'test123@gmail.com', password: 'welcome',
         bio: 'I am a musician and a professor.', role: 'Admin', image: 'user-1.jpg'},
         { id: 12, firstName: 'many', lastName: 'eue', email: 'test456@gmail.com', password: 'welcome',
         bio: 'I am a volunteer.', role: 'staff', image: 'user-2.jpg'},
     ];
+
+    // All pages of the site. The user dashboard isn't here (it is in the navigation component)
     const menu = [
       { id: 1, title: 'home', link: '/home'},
       { id: 2, title: 'archive', link: '/blog'},
       { id: 3, title: 'forstaff', link: '/forstaff'},
     ];
+
+    // All posts. These are old, unused, version. New ones are in the blog component.
     const posts = [
           {id: 1, title: 'Interview', Arranger: 'Lioyd Trotman', Artist: 'Sam Taylor', note: '2018-06-19T07:22Z'},
           {id: 2,  title: 'Music 1', Arranger: 'Qin Quan Lin', Artist: 'Qin Quan Li', note: '2018-06-19T07:22Z'},
@@ -33,6 +43,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {id: 11, title: 'Music 6', Arranger: 'Anoymous', Artist: 'Anoymous', note: '2018-06-19T07:22Z'},
       ];
 
+      // All the currently returned data. To declare new data, add its name to the return array below.
     return {users, posts, menu};
   };
 
@@ -44,6 +55,7 @@ export class InMemoryDataService implements InMemoryDbService {
     return undefined; //if it's undefined, it automatically passed to default get method
   }
 
+  // Obtain article 
   getArticle(reqInfo: RequestInfo) {
     return reqInfo.utils.createResponse$(() => {
       const dataEncapsulation = reqInfo.utils.getConfig().dataEncapsulation;
