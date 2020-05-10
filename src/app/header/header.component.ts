@@ -1,4 +1,4 @@
-//Amber
+//This file is for the homepage
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 
@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     this.header = this.getHeader();
   }
 
+  //returns home page
   getHeader() {
     return this.config.getConfig().header;
   }

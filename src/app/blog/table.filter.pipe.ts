@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+//This file was meant to be an alternative filter for the archive page
+
 @Pipe({
   name: 'tableFilter'
 })

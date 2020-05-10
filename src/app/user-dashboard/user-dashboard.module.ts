@@ -1,4 +1,4 @@
-//Amber
+//File for user dashboard, combines user-dashboard and user-profile-icon components
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

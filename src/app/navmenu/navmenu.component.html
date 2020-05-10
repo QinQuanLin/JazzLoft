@@ -1,4 +1,6 @@
+<!--Links on navigation bar-->
 <ul *ngIf="menuopen" [class.expanded]="menuopen===true">
+    <!--Uses for loop to show each link-->
     <li *ngFor="let menuitem of menu">
         <a 
         (click)="changeStatus($event)" 

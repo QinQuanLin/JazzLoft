@@ -1,4 +1,4 @@
-//Amber
+//Function for displaying Archive page
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ConfigService } from '../config.service';
 import { Post } from '../post';
@@ -53,17 +53,19 @@ export class BlogComponent implements OnInit {
       }
     ]
   }
+  //enables usage of paginator and sort functions
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
+  //initializes the component
   ngOnInit() {
     this.getRemoteData();
 
-    // Overrride default filter behaviour of Material Datatable
+    // Overrides default filter behaviour of Material Datatable
     this.dataSource.filterPredicate = this.createFilter();
   }
 
-  // Get Uniqu values from columns to build filter
+  // Gets unique values from columns to build filter
   getFilterObject(fullObj, key) {
     const uniqChk = [];
     fullObj.filter((obj) => {
@@ -75,7 +77,7 @@ export class BlogComponent implements OnInit {
     return uniqChk;
   }
 
-  // Get remote serve data using HTTP call
+  // Gets remote dummy data to populate table
   getRemoteData() {
 
     const remoteDummyData = [
@@ -95,6 +97,7 @@ export class BlogComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
 
+    //generates filter options using data in table
     this.filterSelectObj.filter((o) => {
       o.options = this.getFilterObject(remoteDummyData, o.columnProp);
     });

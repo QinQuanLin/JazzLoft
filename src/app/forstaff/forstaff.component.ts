@@ -1,4 +1,4 @@
-//Young Seok
+//this file is for-staff page
 import { Component, OnInit } from '@angular/core';
 
 @Component({

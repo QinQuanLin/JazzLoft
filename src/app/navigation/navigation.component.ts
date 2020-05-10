@@ -1,4 +1,4 @@
-//Amber
+//File for navigation menu
 import { Component, OnInit, AfterContentChecked } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { Location } from '@angular/common';
@@ -13,6 +13,7 @@ import { Observable, of } from 'rxjs';
 })
 export class NavigationComponent implements OnInit, AfterContentChecked {
 
+  //declare variables for creating menu
   menu: any;
   isloggedIn: boolean;
   database = 'menu';
@@ -20,6 +21,7 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
   profileImage: string;
   user: any;
 
+  //declare services that will be used for setting login session
   constructor(private location: Location,
     private auth: AuthenticationService,
     private config: ConfigService) { }
@@ -33,6 +35,7 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
 
   }
 
+  //Checks for login session
   ngAfterContentChecked() { //every time auth changes, call getUser, which changes the profile icon.
     of(this.auth.isloggedIn).subscribe(
       () => {
@@ -41,6 +44,7 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
     )
   }
 
+  //Generates menu
   getMenu(database) {
     this.config.getSettings(database).subscribe(
       settings => {
@@ -50,6 +54,7 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
     );
   }
 
+  //Generates profile icon
   getUser() {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
     if (this.user) {
@@ -60,10 +65,12 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
     }
   }
 
+  //Sets state of menu
   toggleMenu(state) {
     this.menuOpen = state;
   }
 
+  //Logout function, ends login session
   logout() {
     this.auth.logout();
   }

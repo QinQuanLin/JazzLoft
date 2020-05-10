@@ -1,4 +1,4 @@
-//Young Seok
+//This file is for function that not found
 import { Component, OnInit } from '@angular/core';
 
 @Component({
