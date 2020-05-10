@@ -31,6 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ___________________________________________________________________________________________________________________________
 
 
+
+
+
 Jazz Loft Online Music Archive
 Software Design Document
 
@@ -49,16 +52,12 @@ Date: 05/08/2020
 
 
 
-
 USER INSTRUCTION
 
 
 Background:
 This software is created to grant instant access to the music collections at Jazz Loft, Long Island. Music scholars and other students of music who want to research a particular artist, discover new knowledge, or are simply curious about a particular piece of music will no longer need to travel to Long Island.
-Styled to create a Jazz vibe, this frontend software makes it both fun and easy to explore rare music collections, including scores, historical documentations, and other information that would further the user’s understanding of Jazz Music. Connecting to FileMaker API, where the data is digitized and stored, the user can play recordings directly on the website.
-
-“Namari” template was used from OneLovePage: https://onepagelove.com/namari. This template is free to use and doesn’t require attribution.
-Various Angular formats, such as table and filter, and libraries such as jQuery, FontAwesome, and Bootstrap were installed in the code. Their uses are limited and some even removed.
+Styled to create a Jazz vibe, this front-end software makes it both fun and easy to explore rare music collections, including scores, historical documentations, and other information that would further the user’s understanding of Jazz Music. Connecting to FileMaker API, where the data is digitized and stored, the user can play recordings directly on the website.
 
 Requirements:
 Running this website requires Angular to be installed on the local workstation or server.
@@ -75,6 +74,7 @@ In command prompt (Windows) or terminal (MacOS), run the command npm -v to check
 
 	Importing website from Github
 Download the code from https://github.com/QinQuanLin/JazzLoft. Note where the files are saved on the local drive.
+
 
 Running:
 Open command in Window or terminal in MAC OS
@@ -99,6 +99,8 @@ This page shows detailed information about the item in the archive. This include
 	ForStaff page
 This page is for staff to login or sign up to insert/edit/delete the item. If the editor has authorization, then they can log in using the login tab, otherwise they should ask for authorization on the sign up tab.
 
+
+
 Future Improvements:
 More visual details
 Make HTTP connections in both Archive and Item page to insert/edit/delete the information between database and website
@@ -113,5 +115,13 @@ Authentication for user login requires a separate database for user accounts and
 License:
 MIT License
 Copyright (c) 2020 Jazz Loft
-https://github.com/QinQuanLin/JazzLoft/blob/master/LICENSE.md 
+“Namari” template was used from OneLovePage: https://onepagelove.com/namari. This template is free to use and doesn’t require attribution.
+Various Angular formats, such as table and filter, and libraries such as jQuery, FontAwesome, and Bootstrap were installed in the code. Their uses are limited and some even removed.
+
+All Relevant Links:
+Course Project Link: https://you.stonybrook.edu/339jazzloft/
+Bibliography: https://drive.google.com/drive/u/1/folders/1fTQyS9EcmT_ZZ7hHY5MrAX3n8QeJD78j
+Course Requirement: https://xsrv.mm.cs.stonybrook.edu/c4g/390grading.html
+GitHub Repository: https://github.com/QinQuanLin/JazzLoft
+License: https://github.com/QinQuanLin/JazzLoft/blob/master/LICENSE.md 
 
