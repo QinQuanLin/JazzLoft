@@ -114,7 +114,7 @@ Authentication for user login requires a separate database for user accounts and
 
 License:
 MIT License
-Copyright (c) 2020 Jazz Loft
+Copyright (c) 2020 Qin Quan Lin
 “Namari” template was used from OneLovePage: https://onepagelove.com/namari. This template is free to use and doesn’t require attribution.
 Various Angular formats, such as table and filter, and libraries such as jQuery, FontAwesome, and Bootstrap were installed in the code. Their uses are limited and some even removed.
 
