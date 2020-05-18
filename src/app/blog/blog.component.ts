@@ -81,17 +81,17 @@ export class BlogComponent implements OnInit {
   getRemoteData() {
 
     const remoteDummyData = [
-      {"id": 1, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Tenor Sax'},
-        {"id": 2,  "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Piano'},
-        {"id": 3, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Bass'},
-        {"id": 4, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Lead Sheet',},
-        {"id": 5, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Score'},
-        {"id": 6, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Concert'},
-        {"id": 7, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Alto Sax'},
-        {"id": 8, "title": 'Interview - Lioyd Trotman', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Percussion'},
-        {"id": 9, "title": 'Master Acetate Recording', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'Circa 1955'},
-        {"id": 10, "title": 'Audiodisc Master Acetate', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'Unknown composition'},
-        {"id": 11, "title": 'Naturally', "arranger": 'Lioyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'See more info'},
+      {"id": 1, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Tenor Sax'},
+        {"id": 2,  "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Piano'},
+        {"id": 3, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Bass'},
+        {"id": 4, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Lead Sheet',},
+        {"id": 5, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Score'},
+        {"id": 6, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Concert'},
+        {"id": 7, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Alto Sax'},
+        {"id": 8, "title": 'Interview - Lloyd Trotman', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Music Sheet', "note": 'Percussion'},
+        {"id": 9, "title": 'Master Acetate Recording', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'Circa 1955'},
+        {"id": 10, "title": 'Audiodisc Master Acetate', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'Unknown composition'},
+        {"id": 11, "title": 'Naturally', "arranger": 'Lloyd Trotman', "artist": 'Sam Taylor', "form": 'Audio', "note": 'See more info'},
     ];
     this.dataSource.data = remoteDummyData;
     this.dataSource.paginator = this.paginator;
